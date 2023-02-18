@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи + аккордеон</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form class="request_form" action="">
+        <h3 class="header_request">Leave a request</h3>
+        <input class="input_request" type="text" placeholder="Name">
+        <input class="input_request" type="email" placeholder="Email">
+        <button class="btn_request" type="submit">Send</button>
+        <span class="exit_request"></span>
+    </form>
+
+    <div class="accordion">
+        <div class="box_accordion">
+            <h4 class="header_accordion">Какую гарантию вы даете?</h4>
+            <span class="arrow_down"></span>
+            <p class="hidden p_accordion">Работаем официально, поэтому гарантируем безупречный результат. Полная оплата берётся только после уборки. Отвечаем за сохранность первоначального вида всех поверхностей.</p>
+        </div>
+        <div class="box_accordion">
+            <h4 class="header_accordion">Какую гарантию вы даете?</h4>
+            <span class="arrow_down"></span>
+            <p class="hidden p_accordion">Работаем официально, поэтому гарантируем безупречный результат. Полная оплата берётся только после уборки. Отвечаем за сохранность первоначального вида всех поверхностей.</p>
+        </div>
+    </div>
+</body>
+
+<script >
+    document.querySelectorAll('.box_accordion')
+    .forEach(el => el.addEventListener('click', () => {
+       el.querySelector('.p_accordion').classList.toggle('hidden');
+    }));
+</script>
+</html>

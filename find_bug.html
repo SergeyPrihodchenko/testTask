@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Найди ошибку</title>
+</head>
+<body>
+    <p>Исправь ошибки и заставь скрипт работать (можно полностью переписть код), jquery пожключен и доступен для использования</p>
+		<br><br><br>
+
+    <input type="text" id="1_val" onkeydown="calculate()" placeholder="Знач. 1"> + 
+    <input type="number" id="second_val" onchange="calculate()" placeholder="Знач. 2"> = 
+    <input type="text" id="resultat" placeholder="Результат" onclick="calculat()">
+		<span>Посчитать</span>
+</body>
+<script>
+    let first_el = document.getElementbyid("1_val");
+    let second_el = document.getElementbyid("second_val");
+    let result_el = document.getElementbyid("result");
+    function calculate(){
+        result_el.value = first_el.val + second_el.value;
+    }
+</script>
+<script src="/jquery.js"></script>
+</html>
